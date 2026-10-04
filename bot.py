@@ -97,5 +97,8 @@ def handle_messages(message):
 
 if __name__ == "__main__":
     print("Бот запущен...")
-    bot.remove_webhook()
+    try:
+        bot.remove_webhook()
+    except Exception:
+        pass
     bot.infinity_polling()
